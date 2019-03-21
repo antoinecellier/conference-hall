@@ -1,7 +1,7 @@
 .titlebar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 2em;
 }
 
@@ -10,10 +10,12 @@
   letter-spacing: 2px;
   font-weight: 400;
   text-transform: uppercase;
+  overflow: hidden;
 }
 
 .titlebar .titlebar-actions {
   display: flex;
+  align-items: center;
 }
 
 .titlebar .titlebar-actions > * {

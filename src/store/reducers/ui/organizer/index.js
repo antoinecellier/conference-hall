@@ -3,6 +3,8 @@ import myOrganizations from './myOrganizations'
 import proposal from './proposal'
 import proposals from './proposals'
 import proposalsPaging from './proposalsPaging'
+import proposalsExport from './proposalsExport'
+import organizersThread from './organizersThread'
 
 export default {
   myEvents,
@@ -10,4 +12,6 @@ export default {
   proposal,
   proposals,
   proposalsPaging,
+  proposalsExport,
+  organizersThread,
 }

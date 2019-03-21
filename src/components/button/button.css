@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   letter-spacing: 1px;
-  outline: none;
   padding: 10px 16px;
   position: relative;
   transition: all 0.25s;
@@ -166,10 +165,12 @@
 }
 
 .cc-button-secondary.cc-button:disabled {
+  border: 1px solid var(--grey-color-dark);
   background: none;
 }
 
 .cc-button-secondary.cc-button:disabled:hover {
+  border: 1px solid var(--grey-color-dark);
   background: none;
 }
 

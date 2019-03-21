@@ -7,17 +7,18 @@ import AppLayout from 'layout'
 import Contributors from 'screens/components/contributors'
 import Profile from 'screens/components/profile'
 import Sidebar from './sidebar'
+import isEventAuthorized from './isEventAutorized'
 
 import { restrictBeta } from '../conference/betaAccess'
 import EventCreate from './event/create'
 import EventEdit from './event/edit'
 import Event from './event/page'
 import MyEvents from './events'
-import OrganizationCreate from './organization/create'
-import OrganizationEdit from './organization/edit'
 import OrganizationPage from './organization/page'
-import InviteOrganizer from './organization/invite'
-import MyOrganizations from './organizations'
+import OrganizationCreate from './organization/form/organizationCreate.container'
+import OrganizationEdit from './organization/form/organizationEdit.container'
+import OrganizationsList from './organization/list'
+import OrganizationInvite from './organization/invite'
 import Proposals from './proposals'
 import Proposal from './proposal'
 
@@ -31,12 +32,17 @@ const Organizer = () => (
     <OrganizationCreate />
     <OrganizationEdit />
     <OrganizationPage />
-    <InviteOrganizer />
-    <MyOrganizations />
+    <OrganizationsList />
+    <OrganizationInvite />
     <Proposals />
     <Proposal />
     <Contributors />
   </AppLayout>
 )
 
-export default compose(forRoute('organizer'), protect, restrictBeta)(Organizer)
+export default compose(
+  forRoute('organizer'),
+  protect,
+  restrictBeta,
+  isEventAuthorized,
+)(Organizer)

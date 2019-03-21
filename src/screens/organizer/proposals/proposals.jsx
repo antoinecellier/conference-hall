@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Titlebar from 'components/titlebar'
-import ProposalFilters from './proposalFilters'
+import ProposalsToolbar from './proposalsToolbar'
 import ProposalsList from './proposalsList'
+import ProposalsCards from './proposalsCards'
 import ProposalsPaging from './proposalsPaging'
 
 const Proposals = ({ eventId, nbProposals }) => {
@@ -11,8 +12,9 @@ const Proposals = ({ eventId, nbProposals }) => {
   return (
     <div>
       <Titlebar icon="fa fa-paper-plane" title={title} className="no-print" />
-      <ProposalFilters eventId={eventId} />
+      <ProposalsToolbar eventId={eventId} />
       <ProposalsList eventId={eventId} />
+      <ProposalsCards eventId={eventId} />
       <ProposalsPaging />
     </div>
   )

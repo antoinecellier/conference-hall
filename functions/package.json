@@ -9,16 +9,26 @@
     "api": "firebase serve --only hosting,functions",
     "shell": "firebase functions:shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "test": "mocha --reporter spec ./**/*.test.js",
+    "test:coverage": "nyc --reporter=html --reporter=text mocha ./**/*.test.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
-    "firebase-admin": "^6.3.0",
-    "firebase-functions": "^2.1.0",
+    "firebase-admin": "^7.0.0",
+    "firebase-functions": "^2.2.0",
     "form-data": "^2.3.3",
     "immutadot": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.11",
-    "luxon": "^1.8.2"
+    "luxon": "^1.11.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "firebase-functions-test": "^0.1.6",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "sinon": "^7.2.7"
   }
 }

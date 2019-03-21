@@ -5,7 +5,8 @@ node_modules
 package-lock.json
 
 # testing
-/coverage
+**/coverage
+**/.nyc_output/
 
 # production
 /build
@@ -30,7 +31,7 @@ firebase-debug.log*
 .firebase/
 
 # docz
-.docz/**/
+.docz/
 
 # IDE
 .idea/
